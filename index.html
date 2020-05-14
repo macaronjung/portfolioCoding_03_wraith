@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starcraft</title>
+
+  <!-- <script defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .unit {
+      display: block;
+      margin: 0 auto;
+      padding: 5% 0;
+      width: 50%;
+    }
+
+    #cloaking {
+      position: absolute;
+      bottom: 0;
+      left: 590px;
+    }
+
+    #wraith {
+
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="unit">
+    <img id="cloaking" src="images/cloaking.png" alt="cloaking">
+    <img id="wraith" src="images/wraith.png" alt="wraith">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <!-- <script>
+    /* 준비되었을때 */
+    $(document).ready(function(){
+      /* #cloaking을 클릭하면 */
+      $("#cloaking").click(function(){
+        /* #wraith의 토글기능 활성화 */
+        $("#wraith").toggle();
+      });
+    });
+  </script> -->
+
+  
+  <script>
+    /* fade 효과 */
+    $( "#cloaking" ).first().click(function() {
+     $( "#wraith" ).first().fadeToggle( "slow", "linear" );
+    });
+
+    /* draggable 효과 (jQuery UI -> 추가로 필요!) */
+    /* $( function() {
+      $( "#cloaking" ).draggable();
+    } ); */
+
+    /* $(function () {
+  $('#cloaking').popover({
+    container: 'body'
+  })
+}) */
+  </script>
+
+</body>
+</html>
